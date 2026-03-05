@@ -204,7 +204,7 @@ nav ul li a.active {
 
 .preview-section {
   display: flex;
-  height: 80vh; /* උස වැඩි කිරීමෙන් වීඩියෝ එකේ පෙනුම නිවැරදි වේ */
+  height: 75vh; /* වීඩියෝ එකේ Zoom එක පාලනය කිරීමට මෙය 75vh හෝ 80vh ලෙස තබන්න */
   width: 100%;
 }
 
@@ -215,6 +215,7 @@ nav ul li a.active {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000; /* වීඩියෝව load වන තෙක් කළු පැහැය පෙන්වීමට */
 }
 
 .category-video {
@@ -227,14 +228,14 @@ nav ul li a.active {
   height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover; /* සම්පූර්ණ ඉඩ පිරවීමට */
-  object-position: center; /* වීඩියෝවේ මැද කොටස පෙන්වීමට */
+  object-position: center; /* වීඩියෝවේ මැද කොටස ඉලක්ක කිරීමට */
   z-index: 1;
 }
 
 .category-card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* අකුරු පෑදීමට අඳුරු කිරීම */
+  background: rgba(0, 0, 0, 0.65); /* අකුරු පෑදීමට මඳක් අඳුරු කිරීම */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,17 +246,23 @@ nav ul li a.active {
 }
 
 .category-card:hover .overlay {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.4);
 }
 
-/* Mobile එකේදී Zoom නොවී පේන්න */
+.overlay h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Mobile එකේදී පිළිවෙළට පෙනීමට */
 @media (max-width: 768px) {
   .preview-section {
     flex-direction: column;
     height: auto;
   }
   .category-card {
-    height: 450px; /* Mobile එකට ගැලපෙන උසක් */
+    height: 450px;
   }
 }
 
