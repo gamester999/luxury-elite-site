@@ -199,12 +199,12 @@ nav ul li a.active {
 }
 
 /* ============================= */
-/* PREVIEW SECTION (NO ZOOM)     */
+/* PREVIEW SECTION (FIXED ZOOM)  */
 /* ============================= */
 
 .preview-section {
   display: flex;
-  height: 60vh;
+  height: 80vh; /* උස වැඩි කිරීමෙන් වීඩියෝ එකේ පෙනුම නිවැරදි වේ */
   width: 100%;
 }
 
@@ -215,8 +215,6 @@ nav ul li a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* transition එක තැබුවේ background fade එක smooth වීමටයි */
-  transition: 0.5s ease;
 }
 
 .category-video {
@@ -225,20 +223,18 @@ nav ul li a.active {
   left: 50%;
   min-width: 100%;
   min-height: 100%;
+  width: auto;
+  height: auto;
   transform: translate(-50%, -50%);
-  object-fit: cover;
+  object-fit: cover; /* සම්පූර්ණ ඉඩ පිරවීමට */
+  object-position: center; /* වීඩියෝවේ මැද කොටස පෙන්වීමට */
   z-index: 1;
-}
-
-/* Hover කළ විට වීඩියෝ එකේ scale එක වෙනස් නොවන ලෙස සකසා ඇත */
-.category-card:hover .category-video {
-  transform: translate(-50%, -50%); 
 }
 
 .category-card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75); /* අකුරු හොඳින් පෙනීමට මඳක් වැඩිපුර අඳුරු කරන ලදි */
+  background: rgba(0, 0, 0, 0.6); /* අකුරු පෑදීමට අඳුරු කිරීම */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,26 +244,19 @@ nav ul li a.active {
   transition: 0.5s ease;
 }
 
-/* Hover කළ විට අඳුරු ගතිය (Overlay) පමණක් අඩු වේ */
 .category-card:hover .overlay {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.35);
 }
 
-.link-btn {
-  color: #d4af37;
-  text-decoration: none;
-  border: 1px solid #d4af37;
-  padding: 8px 20px;
-  margin-top: 15px;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.link-btn:hover {
-  background: #d4af37;
-  color: #000;
+/* Mobile එකේදී Zoom නොවී පේන්න */
+@media (max-width: 768px) {
+  .preview-section {
+    flex-direction: column;
+    height: auto;
+  }
+  .category-card {
+    height: 450px; /* Mobile එකට ගැලපෙන උසක් */
+  }
 }
 
 /* ============================= */
