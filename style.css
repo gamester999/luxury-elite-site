@@ -199,70 +199,70 @@ nav ul li a.active {
 }
 
 /* ============================= */
-/* PREVIEW SECTION (FIXED ZOOM)  */
+/* PREVIEW SECTION (NO MORE ZOOM)*/
 /* ============================= */
 
 .preview-section {
   display: flex;
-  height: 75vh; /* වීඩියෝ එකේ Zoom එක පාලනය කිරීමට මෙය 75vh හෝ 80vh ලෙස තබන්න */
+  flex-direction: column; /* මේක row එකෙන් column එකට මාරු කළාම පෙනුම සුපිරි වෙනවා */
   width: 100%;
+  gap: 10px; /* Cards දෙක අතර පොඩි ඉඩක් */
+  padding: 20px 0;
 }
 
 .category-card {
-  flex: 1;
   position: relative;
+  width: 100%;
+  height: 400px; /* Card එකේ උස අඩු කළාම වීඩියෝ එකේ Zoom එක ඉබේම අඩුවෙනවා */
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000; /* වීඩියෝව load වන තෙක් කළු පැහැය පෙන්වීමට */
 }
 
 .category-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
+  width: 100%;
+  height: auto; /* උස auto දාලා පළල 100% කළාම Zoom එක පාලනය වෙනවා */
   min-height: 100%;
-  width: auto;
-  height: auto;
   transform: translate(-50%, -50%);
-  object-fit: cover; /* සම්පූර්ණ ඉඩ පිරවීමට */
-  object-position: center; /* වීඩියෝවේ මැද කොටස ඉලක්ක කිරීමට */
+  object-fit: cover; 
   z-index: 1;
 }
 
 .category-card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65); /* අකුරු පෑදීමට මඳක් අඳුරු කිරීම */
+  background: rgba(0, 0, 0, 0.5); 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   z-index: 2;
   transition: 0.5s ease;
 }
 
+/* Hover effect එකක් ඕනේ නැති නිසා transform අයින් කළා */
 .category-card:hover .overlay {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .overlay h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
 }
 
-/* Mobile එකේදී පිළිවෙළට පෙනීමට */
-@media (max-width: 768px) {
+/* Desktop එකේදී Cards දෙක දෙපැත්තට ගන්න ඕනේ නම් මේක තියන්න */
+@media (min-width: 992px) {
   .preview-section {
-    flex-direction: column;
-    height: auto;
+    flex-direction: row;
+    height: 500px; /* Desktop එකේ උස මේ විදිහට තියන්න */
   }
   .category-card {
-    height: 450px;
+    height: 100%;
   }
 }
 
