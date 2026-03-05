@@ -199,7 +199,7 @@ nav ul li a.active {
 }
 
 /* ============================= */
-/* PREVIEW SECTION */
+/* PREVIEW SECTION (NO ZOOM)     */
 /* ============================= */
 
 .preview-section {
@@ -215,11 +215,8 @@ nav ul li a.active {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.6s ease;
-}
-
-.category-card:hover {
-  transform: scale(1.02);
+  /* transition එක තැබුවේ background fade එක smooth වීමටයි */
+  transition: 0.5s ease;
 }
 
 .category-video {
@@ -231,17 +228,17 @@ nav ul li a.active {
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1;
-  transition: 0.6s ease;
 }
 
+/* Hover කළ විට වීඩියෝ එකේ scale එක වෙනස් නොවන ලෙස සකසා ඇත */
 .category-card:hover .category-video {
-  transform: translate(-50%, -50%) scale(1.08);
+  transform: translate(-50%, -50%); 
 }
 
 .category-card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.75); /* අකුරු හොඳින් පෙනීමට මඳක් වැඩිපුර අඳුරු කරන ලදි */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,6 +248,7 @@ nav ul li a.active {
   transition: 0.5s ease;
 }
 
+/* Hover කළ විට අඳුරු ගතිය (Overlay) පමණක් අඩු වේ */
 .category-card:hover .overlay {
   background: rgba(0, 0, 0, 0.4);
 }
@@ -262,6 +260,8 @@ nav ul li a.active {
   padding: 8px 20px;
   margin-top: 15px;
   font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
   transition: 0.3s;
 }
 
