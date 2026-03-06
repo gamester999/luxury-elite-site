@@ -152,9 +152,9 @@ nav ul li a.active {
   color: #000;
 }
 .link-btn {
-  color: #d4af37;
+  color: #D4AF37;
   text-decoration: none;
-  border: 1px solid #d4af37;
+  border: none;
 }
 /* Scroll Indicator */
 
