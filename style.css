@@ -144,18 +144,21 @@ nav ul li a.active {
 }
 
 .btn-gold:hover {
-  background: #fff;
+  background: #d4af37;
+  color: #000;
 }
 
 .btn-outline:hover {
   background: #d4af37;
   color: #000;
 }
+
 .link-btn {
   color: #D4AF37;
   text-decoration: none;
   border: none;
 }
+
 /* Scroll Indicator */
 
 .scroll-down {
@@ -209,16 +212,19 @@ nav ul li a.active {
 
 .preview-section {
   display: flex;
-  flex-direction: column; /* මේක row එකෙන් column එකට මාරු කළාම පෙනුම සුපිරි වෙනවා */
+  flex-direction: column;
+  /* මේක row එකෙන් column එකට මාරු කළාම පෙනුම සුපිරි වෙනවා */
   width: 100%;
-  gap: 10px; /* Cards දෙක අතර පොඩි ඉඩක් */
+  gap: 10px;
+  /* Cards දෙක අතර පොඩි ඉඩක් */
   padding: 20px 0;
 }
 
 .category-card {
   position: relative;
   width: 100%;
-  height: 400px; /* Card එකේ උස අඩු කළාම වීඩියෝ එකේ Zoom එක ඉබේම අඩුවෙනවා */
+  height: 400px;
+  /* Card එකේ උස අඩු කළාම වීඩියෝ එකේ Zoom එක ඉබේම අඩුවෙනවා */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -230,17 +236,18 @@ nav ul li a.active {
   top: 50%;
   left: 50%;
   width: 100%;
-  height: auto; /* උස auto දාලා පළල 100% කළාම Zoom එක පාලනය වෙනවා */
+  height: auto;
+  /* උස auto දාලා පළල 100% කළාම Zoom එක පාලනය වෙනවා */
   min-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover; 
+  object-fit: cover;
   z-index: 1;
 }
 
 .category-card .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,8 +271,10 @@ nav ul li a.active {
 @media (min-width: 992px) {
   .preview-section {
     flex-direction: row;
-    height: 500px; /* Desktop එකේ උස මේ විදිහට තියන්න */
+    height: 500px;
+    /* Desktop එකේ උස මේ විදිහට තියන්න */
   }
+
   .category-card {
     height: 100%;
   }
@@ -372,6 +381,7 @@ footer {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
