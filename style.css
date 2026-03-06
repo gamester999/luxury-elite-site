@@ -133,8 +133,9 @@ nav ul li a.active {
 }
 
 .btn-gold {
-  background: #d4af37;
-  color: #000;
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid #d4af37;
 }
 
 .btn-outline {
