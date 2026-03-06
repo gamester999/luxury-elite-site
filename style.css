@@ -150,7 +150,11 @@ nav ul li a.active {
   background: #d4af37;
   color: #000;
 }
-
+.link-btn {
+  color: #d4af37;
+  text-decoration: none;
+  border: 1px solid #d4af37;
+}
 /* Scroll Indicator */
 
 .scroll-down {
