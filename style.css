@@ -6,6 +6,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -120,6 +121,7 @@ nav ul li a.active {
   letter-spacing: 1px;
   animation: fadeUp 1.5s ease forwards;
 }
+
 .hero-tagline {
   font-size: 1.1rem;
   letter-spacing: 4px;
