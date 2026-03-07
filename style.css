@@ -118,6 +118,16 @@ nav ul li a.active {
   letter-spacing: 1px;
   animation: fadeUp 1.5s ease forwards;
 }
+.hero-tagline {
+  font-size: 1.1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d4af37;
+  border-top: 1px solid rgba(212, 175, 55, 0.4);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 12px 30px;
+  display: inline-block;
+}
 
 /* Buttons */
 
