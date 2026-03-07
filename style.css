@@ -148,6 +148,8 @@ nav ul li a.active {
   background: transparent;
   color: #d4af37;
   border: 1px solid #d4af37;
+  width: fit-content;
+  margin: 10px auto;
 }
 
 .btn-outline {
